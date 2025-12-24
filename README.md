@@ -1,190 +1,124 @@
-# Market Basket Analysis & Customer Behavior Insights (Amazon)
-📌 Project Overview
+# 🛒 Market Basket Analysis & Customer Behavior Insights (Amazon)
 
-This project performs Market Basket Analysis and Customer Behavior Analysis using an Amazon customer survey dataset.
-The goal is to understand customer purchase patterns, shopping behavior, segmentation, and generate actionable insights to improve recommendation systems and business decisions.
+## 📌 Overview
+This project focuses on **Market Basket Analysis and Customer Behavior Analysis** using an Amazon customer survey dataset.  
+The objective is to analyze customer purchasing patterns, segment customers, and generate actionable insights to improve **personalized recommendation systems**.
 
-The project combines:
+---
 
-Data Cleaning & Preparation
+## 🎯 Objectives
+- Analyze customer shopping behavior
+- Identify frequently purchased product combinations
+- Segment customers based on behavior and satisfaction
+- Improve recommendation strategies using data-driven insights
+- Reduce cart abandonment through behavioral analysis
 
-Exploratory Data Analysis (EDA)
+---
 
-Customer Segmentation (Rule-based + K-Means)
+## 📂 Dataset Information
+- Total Records: 800
+- Features: 24+
+- Data Type: Survey + Transaction-style data
 
-Market Basket Analysis using Apriori Algorithm
+### Key Columns
+- Demographics: Age, Gender
+- Purchase Behavior: Purchase_Frequency, Purchase_Categories
+- Recommendations & Reviews
+- Cart & Browsing Behavior
+- Customer Satisfaction
 
-Visualization & Reporting
+---
 
-🧠 Business Objectives
+## 🧹 Task 1: Data Cleaning & Preparation
+- Removed duplicate records
+- Handled missing values (median for numeric, "Unknown" for categorical)
+- Standardized text formats
+- Converted frequency-based text to numeric values
+- Fixed inconsistent and invalid entries
 
-Identify frequently purchased product combinations
+---
 
-Understand customer shopping behavior & satisfaction
+## 📊 Task 2: Exploratory Data Analysis
+- Age and gender distribution analysis
+- Purchase frequency trends
+- Top product categories
+- Browsing methods analysis
+- Cart abandonment factors
+- Customer satisfaction metrics
 
-Segment customers into meaningful groups
+---
 
-Improve personalized recommendation strategies
+## 👥 Task 3: Customer Segmentation
 
-Extract insights to reduce cart abandonment
-
-🗂️ Dataset Description
-
-Rows: 800
-
-Columns: 24+
-
-Data Type: Customer survey & transaction-style data
-
-Key Features:
-
-Demographics: Age, Gender
-
-Purchase behavior: Purchase_Frequency, Purchase_Categories
-
-Recommendation usage & satisfaction
-
-Reviews & ratings
-
-Cart behavior & browsing patterns
-
-🧹 Task 1: Data Cleaning & Preparation
-
-✔ Removed duplicates
-✔ Handled missing values (median for numeric, "Unknown" for categorical)
-✔ Standardized text formats
-✔ Converted frequency-based text into numeric scales
-✔ Fixed inconsistent survey responses (invalid ages, formats)
-
-📊 Task 2: Descriptive Behavior Analysis
-
-Age & gender distribution
-
-Purchase frequency trends
-
-Top product categories
-
-Browsing methods analysis
-
-Cart abandonment factors
-
-Customer satisfaction statistics
-
-📌 Key Insight:
-Clothing, Home & Kitchen, Beauty & Personal Care are the most popular categories.
-
-👥 Task 3: Customer Segmentation & Profiling
-🔹 Rule-Based Segmentation
-
+### Rule-Based Segmentation
 Customers classified into:
-
-Frequent Buyers
-
-Occasional Shoppers
-
-At-Risk Customers
+- Frequent Buyers
+- Occasional Shoppers
+- At-Risk Customers
 
 Based on:
+- Purchase frequency
+- Shopping satisfaction
 
-Purchase frequency
+### K-Means Clustering
+- Used Elbow Method & Silhouette Score
+- Optimal clusters selected: 6
+- Features used:
+  - Purchase_Frequency_num
+  - Shopping_Satisfaction
+  - Customer_Reviews_Importance
 
-Shopping satisfaction
+---
 
-🔹 K-Means Clustering
+## 🧠 Task 4: Recommendation & Review Insights
+- Analyzed relationship between recommendation helpfulness and satisfaction
+- Studied impact of review reliability on rating accuracy
+- Segment-wise recommendation behavior analysis
 
-Used Elbow Method & Silhouette Score
+---
 
-Optimal clusters: 6
+## 🧺 Task 5: Market Basket Analysis
+- Converted purchase categories into transaction format
+- Applied One-Hot Encoding
+- Generated Frequent Itemsets using Apriori Algorithm
+- Created Association Rules using:
+  - Support
+  - Confidence
+  - Lift
 
-Features used:
+### Example Insight
+Customers purchasing **Beauty & Personal Care** are more likely to purchase **Clothing & Fashion**.
 
-Purchase Frequency
+---
 
-Shopping Satisfaction
+## 📈 Task 6: Visualization & Reporting
+- Bar charts for top categories
+- Histograms for satisfaction levels
+- Boxplots for recommendation impact
+- Heatmaps for correlation analysis
 
-Review Importance
+---
 
-📌 Created detailed customer profiles per segment.
+## 🛠️ Tools & Technologies
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn
+- MLxtend
+- Jupyter Notebook
 
-🔍 Task 4: Recommendation & Review Insights
+---
 
-Correlation between recommendation helpfulness & satisfaction
+## 🚀 Key Learnings
+- Market Basket Analysis helps in cross-selling
+- Customer segmentation improves targeting
+- Reviews and trust influence satisfaction
+- Behavioral insights enhance recommendation quality
 
-Impact of review reliability on rating accuracy
+---
 
-Segment-wise recommendation behavior analysis
-
-📌 Key Insight:
-Customers who trust recommendations and reviews show better engagement and satisfaction.
-
-🧺 Task 5: Market Basket Analysis (Apriori)
-
-Converted purchase categories into transaction format
-
-Applied One-Hot Encoding
-
-Generated Frequent Itemsets
-
-Built Association Rules using:
-
-Support
-
-Confidence
-
-Lift
-
-📌 Example Insight:
-Customers buying Beauty & Personal Care are likely to also buy Clothing & Fashion.
-
-📈 Task 6: Visualization & Reporting
-
-Visualizations include:
-
-Bar charts (top categories, browsing frequency)
-
-Histograms (satisfaction levels)
-
-Boxplots (recommendation vs satisfaction)
-
-Heatmaps (correlation analysis)
-
-📽️ Video Presentation:
-👉 Loom Video Link included in notebook
-
-🛠️ Tools & Technologies Used
-
-Python
-
-Pandas, NumPy
-
-Matplotlib, Seaborn
-
-Scikit-learn
-
-MLxtend (Apriori, Association Rules)
-
-Jupyter Notebook
-
-🚀 Key Takeaways
-
-Market Basket Analysis helps in cross-selling strategies
-
-Customer segmentation enables targeted recommendations
-
-Reviews & trust play a critical role in satisfaction
-
-Behavioral data improves personalized shopping experience
-
-📌 How to Run the Project
-pip install pandas numpy matplotlib seaborn scikit-learn mlxtend
-
-
-Open and run:
-
-Market Basket Analysis with Python- Amazon.ipynb
-
-👤 Author
+##👤 Author
 
 Md Belal
-Computer Science Student | Data Analytics & Data Science
-📊 Python | SQL | Machine Learning | Power BI
+Computer Science Student | Data Science & Analytics
+Python | SQL | Machine Learning | Power BI
