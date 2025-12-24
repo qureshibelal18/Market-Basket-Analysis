@@ -1,4 +1,4 @@
-🛒 Market Basket Analysis & Customer Behavior Insights (Amazon)
+# Market Basket Analysis & Customer Behavior Insights (Amazon)
 📌 Project Overview
 
 This project performs Market Basket Analysis and Customer Behavior Analysis using an Amazon customer survey dataset.
